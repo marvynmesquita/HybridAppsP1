@@ -183,7 +183,6 @@ router.delete('/tarefas/:id', (req, res) => {
     });
 });
 
-module.exports = router;
 
 /**
  * NOVA API
@@ -243,3 +242,5 @@ router.post('/nova-api', (req, res) => {
         timestamp: new Date().toISOString()
     })
 });
+
+module.exports = router;
