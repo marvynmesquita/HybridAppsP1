@@ -122,22 +122,4 @@ router.get('/nova-pagina', (req, res) => {
     res.render('nova-pagina', pageData);
 });
 
-/**
- * PÁGINA 404
- * ==========
- * Rota: GET *
- * Descrição: Página para rotas não encontradas
- */
-router.get('*', (req, res) => {
-    console.log(`❌ Página não encontrada: ${req.originalUrl}`);
-    
-    const pageData = {
-        title: 'Página não encontrada',
-        description: 'A página que você procura não existe',
-        requestedUrl: req.originalUrl
-    };
-    
-    res.status(404).render('404', pageData);
-});
-
 module.exports = router;
