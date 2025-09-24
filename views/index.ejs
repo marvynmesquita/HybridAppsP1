@@ -1,17 +1,17 @@
+<link rel="stylesheet" href="/css/style.css">
 <!-- Hero Section -->
-<div class="card" style="background: linear-gradient(135deg, rgba(79, 172, 254, 0.2) 0%, rgba(0, 242, 254, 0.2) 100%); border: 1px solid rgba(79, 172, 254, 0.3);">
-    <div style="text-align: center; padding: 20px 0;">
-        <div style="font-size: 4rem; margin-bottom: 20px;">🚀</div>
-        <h2 style="font-size: 2.5rem; margin-bottom: 16px; background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Bem-vindo ao Aplicativo Híbrido!</h2>
-        <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 24px;">Este é um aplicativo híbrido desenvolvido para fins educacionais na Aula 1.</p>
-        <div style="display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-top: 24px;">
-            <div style="text-align: center;">
-                <div style="font-size: 1.5rem; font-weight: 600; color: #4ade80;">v<%= version %></div>
-                <div style="font-size: 0.9rem; opacity: 0.8;">Versão</div>
-            </div>
-            <div style="text-align: center;">
-                <div style="font-size: 1.5rem; font-weight: 600; color: #60a5fa;"><%= currentTime.split(' ')[0] %></div>
-                <div style="font-size: 0.9rem; opacity: 0.8;">Última atualização</div>
+<div class="card hero-section">
+    <div class="hero-content">
+        <div class="hero-icon">🚀</div>
+        <h2 class="hero-title">Bem-vindo ao Aplicativo Híbrido!</h2>
+        <p class="hero-description">Este é um aplicativo híbrido desenvolvido para fins educacionais na Aula 1.</p>
+        <div class="hero-meta">
+            <div class="hero-version">v<%= version %></div>
+            <div class="hero-version-label">Versão</div>
+        </div>
+        <div class="hero-update">
+            <div class="hero-update-time"><%= currentTime.split(' ')[0] %></div>
+            <div class="hero-update-label">Última atualização</div>
             </div>
         </div>
     </div>
@@ -98,8 +98,8 @@
 <!-- Teste da API -->
 <div class="card">
     <h3><i class="fas fa-flask"></i> Teste da API</h3>
-    <p style="margin-bottom: 20px;">Teste as funcionalidades da API diretamente:</p>
-    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+    <p>Teste as funcionalidades da API diretamente:</p>
+    <div">
         <a href="/api/status" class="btn">
             <i class="fas fa-chart-line"></i> Ver Status da API
         </a>
@@ -112,22 +112,22 @@
 <!-- Tecnologias Utilizadas -->
 <div class="card">
     <h3><i class="fas fa-code"></i> Tecnologias Utilizadas</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-top: 20px;">
-        <div style="text-align: center; padding: 16px; background: rgba(0, 0, 0, 0.1); border-radius: 12px;">
-            <div style="font-size: 2rem; margin-bottom: 8px;">🟢</div>
-            <div style="font-weight: 600;">Node.js</div>
+    <div class="tecnologias">
+        <div>
+            <div>🟢</div>
+            <div>Node.js</div>
         </div>
-        <div style="text-align: center; padding: 16px; background: rgba(0, 0, 0, 0.1); border-radius: 12px;">
-            <div style="font-size: 2rem; margin-bottom: 8px;">⚡</div>
-            <div style="font-weight: 600;">Express.js</div>
+        <div>
+            <div>⚡</div>
+            <div>Express.js</div>
         </div>
-        <div style="text-align: center; padding: 16px; background: rgba(0, 0, 0, 0.1); border-radius: 12px;">
-            <div style="font-size: 2rem; margin-bottom: 8px;">🍃</div>
-            <div style="font-weight: 600;">MongoDB</div>
+        <div>
+            <div>🍃</div>
+            <div>MongoDB</div>
         </div>
-        <div style="text-align: center; padding: 16px; background: rgba(0, 0, 0, 0.1); border-radius: 12px;">
-            <div style="font-size: 2rem; margin-bottom: 8px;">🎨</div>
-            <div style="font-weight: 600;">EJS</div>
+        <div>
+            <div>🎨</div>
+            <div>EJS</div>
         </div>
     </div>
 </div>
