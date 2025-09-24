@@ -1,9 +1,6 @@
 /* Import Google Fonts - Inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* Importing Icons */
-@import url('/css/icons.css');
-
 /* Glassmorphism card effect */
 .card {
     backdrop-filter: blur(1.6rem) saturate(180%);
@@ -72,6 +69,7 @@ body {
 .tecnologias {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1.5rem;
     flex-wrap: wrap;
 }
@@ -94,6 +92,10 @@ body {
     width: 98vw;
 }
 
+.footer-section .center {
+    justify-content: center;
+}
+
 .list-item, h3, .grid-item a {
     list-style: none;
     padding: 0;
@@ -101,19 +103,23 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 
 .gg-icon {
-    width: 22px;
-    height: 22px;
+    max-width: 22px;
+    max-height: 22px;
     display: flex;
     align-items: left;
     justify-content: flex-start;
+    margin-right: 0.75rem;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
 
 .btn {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     color: white;
@@ -141,6 +147,7 @@ body {
 .stack-item img {
     height: 2.5rem;
     margin-bottom: 0.5rem;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
 
 .grid {
@@ -152,4 +159,12 @@ body {
 
 .grid-item {
     text-align: left;
+}
+
+.api-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
