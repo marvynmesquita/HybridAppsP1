@@ -17,118 +17,122 @@
     </div>
 </div>
 
-<!-- Status do Sistema -->
-<div class="card">
-    <h3><i class="fas fa-chart-line"></i> Status do Sistema</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
-        <div class="status-indicator status-online">
-            <i class="fas fa-server"></i>
-            <div>
-                <div style="font-weight: 600;">Servidor</div>
-                <div style="font-size: 0.8rem; opacity: 0.8;">Porta 3000</div>
+<div class="info">
+    
+    <!-- Status do Sistema -->
+    <div class="card">
+        <h3><div class="gg-icon"><i class="gg-chart"></i></div> Status do Sistema</h3>
+        <div>
+            <div class="list-item">
+                <div class="gg-icon"><i class="gg-server"></i></div>
+                <div>Servidor</div>
+            </div>
+            <div class="list-item">
+                <div>Porta 3000</div>
+            </div>
+            <div class="list-item">
+                <div class="gg-icon"><i class="gg-database"></i></div>
+                <div>Banco de dados</div>
+            </div>
+            <div class="list-item">
+                <div>Modo offline</div>
+            </div>
+            <div class="list-item">
+                <div class="gg-icon"><i class="fas fa-api"></i></div>
+                <div>
+                    <div>API REST</div>
+                    <div>Online</div>
+                </div>
             </div>
         </div>
-        <div class="status-indicator status-warning">
-            <i class="fas fa-database"></i>
-            <div>
-                <div style="font-weight: 600;">Banco de dados</div>
-                <div style="font-size: 0.8rem; opacity: 0.8;">Modo offline</div>
+    </div>
+
+    <!-- Objetivos da Aula -->
+    <div class="card">
+        <h3><div class="gg-icon"><i class="gg-play-list-check"></i></div> Objetivos da Aula 1</h3>
+        <div>
+            <div class="list-item">
+                <div class="gg-icon"><i class="gg-check-r"></i></div>
+                <span>Configurar ambiente de desenvolvimento</span>
+            </div>
+            <div class="list-item">
+                <div class="gg-icon"><i class="gg-check-r"></i></div>
+                <span>Entender conceitos de aplicativos híbridos</span>
+            </div>
+            <div class="list-item">
+                <div class="gg-icon"><i class="gg-check-r"></i></div>
+                <span>Criar estrutura básica do projeto</span>
+            </div>
+            <div class="list-item">
+                <div class="gg-icon"><i class="gg-check-r"></i></div>
+                <span>Conectar com MongoDB (opcional)</span>
+            </div>
+            <div class="list-item">
+                <div class="gg-icon"><i class="gg-check-r"></i></div>
+                <span>Criar sistema de rotas</span>
             </div>
         </div>
-        <div class="status-indicator status-online">
-            <i class="fas fa-api"></i>
-            <div>
-                <div style="font-weight: 600;">API REST</div>
-                <div style="font-size: 0.8rem; opacity: 0.8;">Online</div>
+    </div>
+
+    <!-- Rotas Disponíveis -->
+    <div class="card">
+        <h3><div class="gg-icon"><i class="gg-link"></i></div> Rotas Disponíveis</h3>
+        <div class="grid">
+            <div class="grid-item">
+                <a href="/sobre"><div class="gg-icon"><i class="gg-info"></i></div> Sobre o Projeto</a>
+                <p>Informações detalhadas sobre o projeto e suas funcionalidades</p>
+            </div>
+            <div class="grid-item">
+                <a href="/tarefas"><div class="gg-icon"><i class="gg-move-task"></i></div> Gerenciar Tarefas</a>
+                <p>Sistema completo de gerenciamento de tarefas</p>
+            </div>
+            <div class="grid-item">
+                <a href="/contato"><div class="gg-icon"><i class="gg-mail"></i></div> Contato</a>
+                <p>Informações de contato e suporte</p>
+            </div>
+            <div class="grid-item">
+                <a href="/api/status"><div class="gg-icon"><i class="gg-chart"></i></div> API Status</a>
+                <p>Status da API em formato JSON</p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Objetivos da Aula -->
-<div class="card">
-    <h3><i class="fas fa-target"></i> Objetivos da Aula 1</h3>
-    <div style="margin-top: 20px;">
-        <div class="list-item">
-            <i class="fas fa-check-circle"></i>
-            <span>Configurar ambiente de desenvolvimento</span>
+<div class="footer-section">
+    <!-- Teste da API -->
+    <div class="card">
+        <h3><div class="gg-icon"><i class="fas fa-flask"></i></div> Teste da API</h3>
+        <p>Teste as funcionalidades da API diretamente:</p>
+        <div class="api-buttons">
+            <a href="/api/status" class="btn">
+                <div class="gg-icon"><i class="fas fa-chart-line"></i></div> Ver Status da API
+            </a>
+            <a href="/api/tarefas" class="btn">
+                <div class="gg-icon"><i class="fas fa-list"></i></div> Listar Tarefas
+            </a>
         </div>
-        <div class="list-item">
-            <i class="fas fa-check-circle"></i>
-            <span>Entender conceitos de aplicativos híbridos</span>
-        </div>
-        <div class="list-item">
-            <i class="fas fa-check-circle"></i>
-            <span>Criar estrutura básica do projeto</span>
-        </div>
-        <div class="list-item">
-            <i class="fas fa-check-circle"></i>
-            <span>Conectar com MongoDB (opcional)</span>
-        </div>
-        <div class="list-item">
-            <i class="fas fa-check-circle"></i>
-            <span>Criar sistema de rotas</span>
+    </div>
+
+    <!-- Tecnologias Utilizadas -->
+    <div class="card">
+        <h3><div class="gg-icon"><i class="fas fa-code"></i></div> Tecnologias Utilizadas</h3>
+        <div class="tecnologias">
+            <div class="stack-item">
+                <img src="/img/nodejs.svg" alt="Node.js">
+                <div>Node.js</div>
+            </div>
+            <div class="stack-item">
+                <img src="/img/express.svg" alt="Express.js">
+                <div>Express.js</div>
+            </div>
+            <div class="stack-item">
+                <img src="/img/mongodb.svg" alt="MongoDB">
+                <div>MongoDB</div>
+            </div>
+            <div class="stack-item">
+                <img src="/img/ejs.svg" alt="EJS">
+                <div>EJS</div>
+            </div>
         </div>
     </div>
 </div>
-
-<!-- Rotas Disponíveis -->
-<div class="card">
-    <h3><i class="fas fa-link"></i> Rotas Disponíveis</h3>
-    <div class="grid">
-        <div class="grid-item">
-            <a href="/sobre"><i class="fas fa-info-circle"></i> Sobre o Projeto</a>
-            <p>Informações detalhadas sobre o projeto e suas funcionalidades</p>
-        </div>
-        <div class="grid-item">
-            <a href="/tarefas"><i class="fas fa-tasks"></i> Gerenciar Tarefas</a>
-            <p>Sistema completo de gerenciamento de tarefas</p>
-        </div>
-        <div class="grid-item">
-            <a href="/contato"><i class="fas fa-envelope"></i> Contato</a>
-            <p>Informações de contato e suporte</p>
-        </div>
-        <div class="grid-item">
-            <a href="/api/status"><i class="fas fa-chart-line"></i> API Status</a>
-            <p>Status da API em formato JSON</p>
-        </div>
-    </div>
-</div>
-
-<!-- Teste da API -->
-<div class="card">
-    <h3><i class="fas fa-flask"></i> Teste da API</h3>
-    <p>Teste as funcionalidades da API diretamente:</p>
-    <div">
-        <a href="/api/status" class="btn">
-            <i class="fas fa-chart-line"></i> Ver Status da API
-        </a>
-        <a href="/api/tarefas" class="btn">
-            <i class="fas fa-list"></i> Listar Tarefas
-        </a>
-    </div>
-</div>
-
-<!-- Tecnologias Utilizadas -->
-<div class="card">
-    <h3><i class="fas fa-code"></i> Tecnologias Utilizadas</h3>
-    <div class="tecnologias">
-        <div>
-            <div>🟢</div>
-            <div>Node.js</div>
-        </div>
-        <div>
-            <div>⚡</div>
-            <div>Express.js</div>
-        </div>
-        <div>
-            <div>🍃</div>
-            <div>MongoDB</div>
-        </div>
-        <div>
-            <div>🎨</div>
-            <div>EJS</div>
-        </div>
-    </div>
-</div>
-
