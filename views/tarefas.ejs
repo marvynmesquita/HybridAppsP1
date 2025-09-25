@@ -1,9 +1,10 @@
-<div class="card">
+<%- include('partials/header') %>
+<div class="card w95 first-card">
     <h2>📋 Gerenciador de Tarefas</h2>
     <p><%= description %></p>
 </div>
 
-<div class="card">
+<div class="card w95">
     <h3>📝 Suas Tarefas</h3>
     <div style="margin-top: 20px;">
         <% tasks.forEach(function(task) { %>
@@ -28,101 +29,31 @@
     </div>
 </div>
 
-<div class="card">
+<div class="card w95">
     <h3>🧪 Teste da API de Tarefas</h3>
     <p>Teste as funcionalidades da API de tarefas:</p>
-    <div style="margin-top: 15px;">
+    <div class="buttons">
         <a href="/api/tarefas" class="btn">📋 Listar Tarefas (JSON)</a>
-        <button onclick="testarCriarTarefa()" class="btn" style="margin-left: 10px;">➕ Criar Tarefa</button>
-        <button onclick="testarAtualizarTarefa()" class="btn" style="margin-left: 10px;">🔄 Atualizar Tarefa</button>
-        <button onclick="testarDeletarTarefa()" class="btn" style="margin-left: 10px;">🗑️ Deletar Tarefa</button>
+        <button onclick="testarCriarTarefa()" class="btn">➕ Criar Tarefa</button>
+        <button onclick="testarAtualizarTarefa()" class="btn">🔄 Atualizar Tarefa</button>
+        <button onclick="testarDeletarTarefa()" class="btn">🗑️ Deletar Tarefa</button>
     </div>
 </div>
 
-<div class="card">
+<div class="card w95">
     <h3>📊 Estatísticas</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 20px;">
-        <div style="background: rgba(0, 0, 0, 0.2); padding: 15px; border-radius: 10px; text-align: center;">
-            <h4 style="color: #4ade80; margin: 0;"><%= tasks.filter(t => t.completed).length %></h4>
-            <p style="margin: 5px 0 0 0; opacity: 0.8;">Concluídas</p>
+    <div class="stats">
+        <div>
+            <h4><%= tasks.filter(t => t.completed).length %></h4>
+            <p>Concluídas</p>
         </div>
-        <div style="background: rgba(0, 0, 0, 0.2); padding: 15px; border-radius: 10px; text-align: center;">
-            <h4 style="color: #fbbf24; margin: 0;"><%= tasks.filter(t => !t.completed).length %></h4>
-            <p style="margin: 5px 0 0 0; opacity: 0.8;">Pendentes</p>
+        <div>
+            <h4><%= tasks.filter(t => !t.completed).length %></h4>
+            <p>Pendentes</p>
         </div>
-        <div style="background: rgba(0, 0, 0, 0.2); padding: 15px; border-radius: 10px; text-align: center;">
-            <h4 style="color: #60a5fa; margin: 0;"><%= tasks.length %></h4>
-            <p style="margin: 5px 0 0 0; opacity: 0.8;">Total</p>
+        <div>
+            <h4><%= tasks.length %></h4>
+            <p>Total</p>
         </div>
     </div>
 </div>
-
-<script>
-function testarCriarTarefa() {
-    const titulo = prompt('Digite o título da tarefa:');
-    if (titulo) {
-        fetch('/api/tarefas', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                titulo: titulo,
-                descricao: 'Tarefa criada via interface'
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert('Tarefa criada com sucesso!\\n\\nResposta: ' + JSON.stringify(data, null, 2));
-            location.reload();
-        })
-        .catch(error => {
-            alert('Erro ao criar tarefa: ' + error.message);
-        });
-    }
-}
-
-function testarAtualizarTarefa() {
-    const id = prompt('Digite o ID da tarefa para atualizar:');
-    if (id) {
-        fetch(`/api/tarefas/${id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                titulo: 'Tarefa atualizada',
-                descricao: 'Descrição atualizada via interface',
-                concluida: true
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert('Tarefa atualizada com sucesso!\\n\\nResposta: ' + JSON.stringify(data, null, 2));
-        })
-        .catch(error => {
-            alert('Erro ao atualizar tarefa: ' + error.message);
-        });
-    }
-}
-
-function testarDeletarTarefa() {
-    const id = prompt('Digite o ID da tarefa para deletar:');
-    if (id) {
-        if (confirm(`Tem certeza que deseja deletar a tarefa ${id}?`)) {
-            fetch(`/api/tarefas/${id}`, {
-                method: 'DELETE'
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert('Tarefa deletada com sucesso!\\n\\nResposta: ' + JSON.stringify(data, null, 2));
-            })
-            .catch(error => {
-                alert('Erro ao deletar tarefa: ' + error.message);
-            });
-        }
-    }
-}
-</script>
-
-

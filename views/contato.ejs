@@ -1,9 +1,10 @@
-<div class="card">
+<%- include('partials/header') %>
+<div class="card w95 first-card">
     <h2>📞 Contato</h2>
     <p><%= description %></p>
 </div>
 
-<div class="card">
+<div class="card w95">
     <h3>📧 Informações de Contato</h3>
     <div style="margin-top: 20px;">
         <div style="background: rgba(0, 0, 0, 0.2); padding: 15px; border-radius: 10px; margin: 10px 0;">
@@ -21,7 +22,7 @@
     </div>
 </div>
 
-<div class="card">
+<div class="card w95">
     <h3>💬 Formulário de Contato</h3>
     <form id="contactForm" style="margin-top: 20px;">
         <div style="margin-bottom: 20px;">
@@ -48,7 +49,7 @@
     </form>
 </div>
 
-<div class="card">
+<div class="card w95">
     <h3>🕒 Horário de Atendimento</h3>
     <div style="margin-top: 20px;">
         <div style="background: rgba(0, 0, 0, 0.2); padding: 15px; border-radius: 10px; margin: 10px 0;">
@@ -65,20 +66,3 @@
         </div>
     </div>
 </div>
-
-<script>
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData);
-    
-    // Simula envio do formulário
-    alert('Mensagem enviada com sucesso!\\n\\nDados:\\n' + JSON.stringify(data, null, 2));
-    
-    // Limpa o formulário
-    this.reset();
-});
-</script>
-
-

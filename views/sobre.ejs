@@ -1,9 +1,10 @@
-<div class="card">
+<%- include('partials/header') %>
+<div class="card w95 first-card">
     <h2>ℹ️ Sobre o Projeto</h2>
     <p><%= description %></p>
 </div>
 
-<div class="card">
+<div class="card w95">
     <h3>🎯 Características do Projeto</h3>
     <ul style="list-style: none; padding: 0;">
         <% features.forEach(function(feature) { %>
@@ -14,7 +15,7 @@
     </ul>
 </div>
 
-<div class="card">
+<div class="card w95">
     <h3>🛠️ Tecnologias Utilizadas</h3>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
         <% technologies.forEach(function(tech) { %>
@@ -25,7 +26,7 @@
     </div>
 </div>
 
-<div class="card">
+<div class="card w95">
     <h3>📚 Objetivos de Aprendizado</h3>
     <ul style="list-style: none; padding: 0;">
         <li style="padding: 8px 0; display: flex; align-items: center; gap: 10px;">
@@ -49,7 +50,7 @@
     </ul>
 </div>
 
-<div class="card">
+<div class="card w95">
     <h3>🚀 Próximos Passos</h3>
     <p>Na próxima aula, vamos:</p>
     <ul style="list-style: none; padding: 0; margin-top: 15px;">
