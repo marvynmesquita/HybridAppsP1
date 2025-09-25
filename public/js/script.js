@@ -1,3 +1,8 @@
+const menuBtn = document.getElementById('menu-btn');
+const navMenu = document.getElementById('nav-menu');
+const contactForm = document.getElementById('contactForm');
+
+
 function testarCriarTarefa() {
     const titulo = prompt('Digite o título da tarefa:');
     if (titulo) {
@@ -64,9 +69,6 @@ function testarDeletarTarefa() {
     }
 }
 
-// Manipulador do formulário de contato
-const contactForm = document.getElementById('contactForm');
-
 // VERIFICA se o formulário existe na página atual antes de adicionar o evento
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
@@ -81,14 +83,23 @@ if (contactForm) {
     });
 }
 
-
-// Manipulador do menu de navegação
-const menuBtn = document.getElementById('menu-btn');
-const navMenu = document.getElementById('nav-menu');
-
 // VERIFICA se o botão E o menu existem na página atual
 if (menuBtn && navMenu) {
-    menuBtn.addEventListener('click', () => {
+    // Evento para ABRIR/FECHAR o menu ao clicar no BOTÃO
+    menuBtn.addEventListener('click', (e) => {
+        // Impede que o clique no botão seja capturado pelo evento do documento abaixo
+        e.stopPropagation(); 
         navMenu.classList.toggle('ativo');
+    });
+
+    // NOVO: Evento para FECHAR o menu ao clicar FORA dele
+    document.addEventListener('click', (e) => {
+        // Verifica se o menu está aberto E se o clique não foi no menu NEM no botão
+        const isClickInsideMenu = navMenu.contains(e.target);
+        const isClickOnButton = menuBtn.contains(e.target);
+
+        if (navMenu.classList.contains('ativo') && !isClickInsideMenu && !isClickOnButton) {
+            navMenu.classList.remove('ativo');
+        }
     });
 }
