@@ -38,6 +38,11 @@
     align-items: center;
 }
 
+.header a{
+    text-decoration: none;
+    color: white;
+}
+
 .header h1 {
     margin: 0;
     font-size: 1.5em;
@@ -57,6 +62,7 @@
     margin: 0.5rem;
     color: white;
     width: 200px;
+    top: 45;
 }
 
 /* Classe 'ativo' que será adicionada via JavaScript para mostrar o menu */
@@ -297,6 +303,14 @@ body .first-card {
     width: 95% !important;
 }
 
+.w89 {
+    width: 89% !important;
+}
+
+.w88 {
+    width: 88% !important;
+}
+
 .h100 {
     height: 100% !important;
 }
@@ -322,7 +336,9 @@ body .first-card {
     .info .card, .footer-section .card{
         width: 100% !important;
     }
-    
+    .w88{
+        width: 95% !important;
+    }
 }
 
 @media (max-width: 1045px){
