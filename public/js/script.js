@@ -2,6 +2,22 @@ const menuBtn = document.getElementById('menu-btn');
 const navMenu = document.getElementById('nav-menu');
 const contactForm = document.getElementById('contactForm');
 
+const checkScreenSize = () => {
+    const width = window.innerWidth;
+    if(width > 700){
+        document.querySelector(".hero-icon").innerText = "💻";
+    } else {
+        document.querySelector(".hero-icon").innerText = "📱";
+    }
+}
+
+window.onresize = () => {
+    checkScreenSize();
+}
+
+document.onload = () => {
+    checkScreenSize();
+}
 
 function testarCriarTarefa() {
     const titulo = prompt('Digite o título da tarefa:');
@@ -77,7 +93,21 @@ if (contactForm) {
         const formData = new FormData(this);
         const data = Object.fromEntries(formData);
         
-        alert('Mensagem enviada com sucesso!\\n\\nDados:\\n' + JSON.stringify(data, null, 2));
+        if (data.nome == undefined || data.nome == "" || data.nome == " "){
+            alert('Nome obrigatório')
+        }
+        else if(data.email == undefined || data.email == "" || data.email == " ") {
+            alert("E-mail obrigatório")
+        }
+        else if(data.assunto == undefined || data.assunto == "" || data.assunto == " ") {
+            alert("Assunto obrigatório")
+        }
+        else if(data.mensagem == undefined || data.mensagem == "" || data.mensagem == " ") {
+            alert("Mensagem obrigatória")
+        }
+        else {
+            alert('Mensagem enviada com sucesso!\\n\\nDados:\\n' + JSON.stringify(data, null, 2));
+        }
         
         this.reset();
     });

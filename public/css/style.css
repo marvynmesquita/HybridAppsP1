@@ -173,6 +173,10 @@ body .first-card {
     grid-row-gap: 0px;
 }
 
+.card a{
+    color: white;
+}
+
 .footer-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -10,7 +10,7 @@
         <% tasks.forEach(function(task) { %>
         <div style="background: rgba(0, 0, 0, 0.2); padding: 15px; border-radius: 10px; margin: 10px 0; display: flex; justify-content: space-between; align-items: center;">
             <div>
-                <h4 style="margin: 0; color: <%= task.completed ? '#4ade80' : '#fbbf24' %>;">
+                <h4 style="margin: 0; color: <%= task.completed ? '#4ade80' : '#fbbf24' %>;" onclick="">
                     <%= task.completed ? '✅' : '⏳' %> <%= task.title %>
                 </h4>
                 <p style="margin: 5px 0 0 0; opacity: 0.8; font-size: 0.9rem;">
